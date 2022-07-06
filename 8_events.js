@@ -9,6 +9,23 @@ HTML
 Script
 window.onload = mesajyaz;
 
+
+-
+window.onload = basla;
+function basla()
+{
+  document.getElementById("yonlendir").onclick = clickHandler;
+}
+
+function clickHandler()
+{
+  alert("hata oluştu!!");
+  return false;
+}
+
+-
+  
+
 Javascript’te HTML DOM’un sağladığı olaylardan hangisi kullanıcının klavyeden bir tuşa basması anında tetiklenmeyi sağlar =  onkeydown
 
 mouseleave: Farenin elementin üzerinden ayrılması Klavye Olayları keypress: Kullanıcının klavyeden bir tuşa basarak elini çekmesi 
