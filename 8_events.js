@@ -4,6 +4,11 @@ HTML elementleri üzerlerinde bir işlem gerçekleştiğinde bunu  bildirmek i�
 Buamaçla elementlerin sağladığı olaylara JS fonksiyonları bağlanır. 
 Örnek onclick, onload 
 
+HTML
+<h1 id="baslik"></h1>
+Script
+window.onload = mesajyaz;
+
 Javascript’te HTML DOM’un sağladığı olaylardan hangisi kullanıcının klavyeden bir tuşa basması anında tetiklenmeyi sağlar =  onkeydown
 
 mouseleave: Farenin elementin üzerinden ayrılması Klavye Olayları keypress: Kullanıcının klavyeden bir tuşa basarak elini çekmesi 
