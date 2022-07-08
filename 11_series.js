@@ -8,3 +8,17 @@ Delete diziden verilen indisli elemanı siler.
 Concat iki diziyi birleştirir. 
 
 shift dizideki ilk elemanı çıkarır. 
+
+arabalar = new Array();
+
+arabalar[0]="a";
+
+arabalar[1]="b";
+
+var arabalar = new Array ("a", "b");
+
+var arabalar = ["a","b"];
+
+arabalar [0] = "c";
+
+Diziler aynı anda birden fazla değeri tutabilir
