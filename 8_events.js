@@ -3,6 +3,14 @@ HTML elementleri üzerlerinde bir işlem gerçekleştiğinde bunu  bildirmek i�
 Örneğin bir düğmeye tıklanması,  klavyeden bir tuşa basılması,sayfanın içeriğinin yüklenmesi gibi  durumlar elementlerin tetiklediği olaylar tarafından JS’ye bildirilir.  JS bu olaylara tepki verecek şekilde programlanabilir. 
 Buamaçla elementlerin sağladığı olaylara JS fonksiyonları bağlanır. 
 Örnek onclick, onload 
+1 <p id=”paragraf”></p>
+2 <script>
+3 function tiklandi(){
+4 document.getElementById(“paragraf”).innerHTML=”düğmeye tıklandı”;
+5 }
+6 </script>
+7 <button id=”dugme” onclick=”tiklandi()”>Tıkla</button>
+
 
 HTML
 <h1 id="baslik"></h1>
