@@ -1,3 +1,53 @@
+s˜ml˜ fonks˜yonun 60 san˜ye sonra çalı°ması ayarlanmı°tır. Daha sonra kontrol edeb˜lmek ˜ç˜n zamanlanmı° görev kontrol de˝˜°ke-n˜ne atanmı°tır. c˜k˜s fonks˜yonu çalı°ması hal˜nde ˜d’s˜ sonuc olan paragrafa “Çıkı° ˜°lem˜ gerçekle°t˜.” mesajını yazmaktadır.
+Zamanlanmış görevin iptali için elearTimeout fonksiyonu kullanılır. Öncek˜ örne˝˜m˜zden devam ederek kullanıcının çıkı° 
+°lem˜n˜ ˜ptal edeb˜lmes˜ ˜ç˜n b˜r dü˝me sa˝layalım. A°a˝ıdak˜ kodda, üçüncü satırda bu ˜°lem ˜ç˜n kullanıcıya b˜r ˆptal Et dü˝-mes˜ sa˝lanmı°tır.
+<p>Uzun süredir işlem yapmadınız. 60 saniye içinde herhangi bir işlem yapmaz-
+    sanız hesabınızı korumak için otomatik olarak çıkış yapılacak. Bu işlemi iptal etmek için aşağıdaki düğmeye tıklayınız.</p>
+<p id=”sonuc”></p>
+<input type=”button” onclick=”iptal()” value=”İptal Et”>
+    <script>
+  var kontrol=setTimeout(cikis, 60000);   function iptal(){
+          clearTimeout(kontrol);
+      document.getElementById(“sonuc”).innerHTML=”Çıkma işlemi iptal edildi.”;
+       }
+  function cikis(){
+          // çıkış rutinlerini çalıştır
+      document.getElementById(“sonuc”).innerHTML=”Çıkış işlemi gerçekleşti.”;
+        }
+</script>
+İptal Et düğmesine tıklandığında iptal isimli fonksiyon çağırılmaktadır. Zamanlanmış görev beşinci satırda ba°latılarak kontrol de˝˜°ken˜ne atanmı°tır. Kullanıcı İptal Et dü˝mes˜ne 60 san˜ye ˜ç˜nde tıklamaz-sa c˜k˜s fonks˜yonu ça˝ırılarak çıkı° ˜°lemler˜ gerçekle°t˜r˜lecekt˜r. °ptal Et dü˝mes˜n˜n oncl˜ck olayı ˜ptal fonks˜yonunu çalı°tıracak °ek˜lde ayarlanmı°tır. ˜ptal fonks˜yonu ˜ç˜nde yed˜nc˜ satırda kontrol de˝˜°ken˜ne atanmı° zamanlanmı° görev sonlandırılmaktadır. clearT˜meout fonks˜yonuna parametre olarak zamanlan-mı° görev kurulurken atama ˜°lem˜ yapılan de˝˜°ken gönder˜l˜r. Bunun ardından sonuc ˜d’l˜ paragrafa “Çık-ma ˜°lem˜ ˜ptal ed˜ld˜” mesajı yazılmaktadır.
+ˆk˜nc˜ zamanlanmı° görev türü, ver˜len kodları bel˜rl˜ zaman aralıklarıyla (ör: her san˜ye) sürekl˜ ˜°let˜r. Bu amaçla setInterval fonks˜yonu kullanılır. Bu fonks˜yona parametre olarak ˜°let˜lecek kodları ˜çeren b˜r fonks˜yon ve m˜l˜san˜ye c˜ns˜nden zaman aralı˝ı ver˜l˜r. Y˜neleme görev˜n˜n kontrol ed˜leb˜lmes˜ ˜ç˜n, gö-rev olu°turulurken b˜r de˝˜°kene aktarılab˜l˜r. Öncek˜ örne˝˜m˜zde kullanıcıya b˜r dü˝meye tıklaması ˜ç˜n 60 san˜ye süre tanımı°tık. Bu örne˝˜m˜z˜ setInterval fonks˜yonu ˜le kullanıcıya dü˝meye tıklamak ˜ç˜n kaç san˜yes˜ kaldı˝ını b˜ld˜recek °ek˜lde gel˜°t˜rel˜m. Bu ˜°lem ˜ç˜n paragraftak˜ mesajımızın ˜ç˜ne kalan sürey˜ b˜ld˜rmek ˜ç˜n b˜r span element˜ olu°turmamız gerek˜yor. Bu element˜n ˜ç˜n˜ her san˜ye y˜nelenen b˜r fonks˜yon ˜le de˝˜°t˜rece˝˜z. Kalan sürey˜ zaman ˜s˜ml˜ b˜r de˝˜°ken ˜le tutab˜l˜r˜z. A°a˝ıda ver˜len kodda, üçüncü satırda bu de˝˜°ken olu°turularak 60 san˜ye de˝er˜ atanmı°tır. 
+
+<p>Uzun süredir işlem yapmadınız. <span id=”zaman”>60</span> saniye içinde
+herhangi bir işlem yapmazsanız hesabınızı korumak için otomatik olarak çıkış yapıla-cak. Bu işlemi iptal etmek için aşağıdaki düğmeye tıklayınız.</p>
+<script>
+      var zaman=60;
+  var kontrol = setTimeout(cikis, zaman*1000);   
+var kontrol2 = setInterval(yenile, 1000);   
+function iptal(){
+        clearTimeout(kontrol);     
+    clearInterval(kontrol2);
+    document.getElementById(“sonuc”).innerHTML=”Çıkma işlemi iptal edildi.”;
+      }
+  function cikis(){
+       // çıkış rutinlerini çalıştır     
+      clearInterval(kontrol2);
+      document.getElementById(“sonuc”).innerHTML=”Çıkış işlemi gerçekleşti.”;
+        }
+  function yenile(){
+          zaman--;
+    document.getElementById(“zaman”).innerHTML=zaman;
+        }
+</script>
+Dördüncü satırda çıkı° ˜°lemler˜n˜ ça˝ıracak zamanlanmı° görev ayarlan-mı°tır. Be°˜nc˜ satırda san˜yede b˜r kez yen˜le fonks˜yonunu ça˝ıran ˜k˜nc˜ za-manlanmı° görev ayarlanmı°tır. 16. satırda ba°layan yen˜le fonks˜yonu zaman de˝˜°ken˜nden 1 çıkartarak mesaj ˜ç˜ndek˜ span alanının ˜ç˜ne yen˜ de˝er˜ yazmaktadır. yen˜le fonks˜yonunu ça˝ıran zamanlanmı° görev˜n senaryomuz-dak˜ ˜k˜ durumda (˜ptal ve çıkı°) da sonlandırılması gerekmekted˜r. Kullanı-cının 60 san˜ye ˜ç˜nde ˆptal Et dü˝mes˜ne basması hal˜nde, sek˜z˜nc˜ satırda kontrol2 de˝˜°ken˜ne atanmı° zamanlanmı° görev clearInterval fonks˜yonu ˜le 
+˜	ptal ed˜lmekted˜r. Aks˜ halde, çıkı° yapılması durumunda c˜k˜s fonks˜yonu
+˜	ç˜nde 13. satırda zamanlanmı° görev˜m˜z y˜ne ˜ptal ed˜lmekted˜r.
+
+      
+
+
+
+
 Tarih Nesnesi 
 JS dilinde tarih işlemlerini gerçekleştirmek için date nesnesi  kullanılır. 
 
