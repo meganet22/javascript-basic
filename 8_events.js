@@ -36,6 +36,18 @@ function clickHandler()
 
 Javascript’te HTML DOM’un sağladığı olaylardan hangisi kullanıcının klavyeden bir tuşa basması anında tetiklenmeyi sağlar =  onkeydown
 
+onchange HTML element˜n˜n durumunun de°˜˙t˜r˜lmes˜ anında tet˜klen˜r. <select onchange=”guncelle()”>
+  
+oncl˜ck Kullanıcının b˜r HTML element˜ne tıklaması sonucu tet˜klen˜r.<button onl˜ck=”gönder()”>
+  
+onmouseover Kullanıcının farey˜ element˜n üzer˜ne get˜rmes˜ anında tet˜klen˜r. <a onmouseover=”renk_deg˜st˜r()”>
+  
+onmouseout Kullanıcının farey˜ element˜n üzer˜nden çekmes˜ anında tet˜klen˜r. <a onmouseout=”g˜zle()”>
+  
+onkeydown Kullanıcının klavyeden b˜r tu˙a basması anında tet˜klen˜r. <input onkeydown=”güncelle()”>
+  
+onload Tarayıcının sayfa ˜çer˜°˜n˜ yüklemey˜ b˜t˜rmes˜ anında tet˜klen˜r. <body onload=”ba˙lat()”>
+
 mouseleave: Farenin elementin üzerinden ayrılması Klavye Olayları keypress: Kullanıcının klavyeden bir tuşa basarak elini çekmesi 
 
 keydown: Kullanıcının klavye tuşuna basması keyup: Kullanıcının klavye tuşundan elini çekmesi Form Olayları 
